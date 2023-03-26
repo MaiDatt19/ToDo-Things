@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_tdt"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.FinalProject">
+        <activity
+            android:name=".ProjectView"
+            android:exported="false" />
+        <activity
+            android:name=".OnlyLogo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:exported="true" />
+        <activity android:name=".Login" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".UserProfile"/>
+        <activity android:name=".DataClass.TodayTask"/>
+        <activity android:name=".DataClass.ImportantTask"/>
+        <activity android:name=".DataClass.QuickTask"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".EditTaskActivity"></activity>
+        <activity android:name=".StartingScreen"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <receiver android:name=".ReminderBroadcast" android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="sendNotification" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
